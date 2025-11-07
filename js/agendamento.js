@@ -13,9 +13,9 @@ const areas = {
 };
 
 const lawyers = {
-    'dr-silva': { name: 'Dr. João Silva', oab: 'OAB/SP 123.456' },
-    'dra-santos': { name: 'Dra. Maria Santos', oab: 'OAB/SP 234.567' },
-    'dr-costa': { name: 'Dr. Pedro Costa', oab: 'OAB/SP 345.678' }
+    'dr-silva': { name: 'Dr. João Silva', oab: 'OAB/SP 12a.456' },
+    'dra-santos': { name: 'Dra. Maria Santos', oab: 'OAB/SP 23b.567' },
+    'dr-costa': { name: 'Dr. Pedro Costa', oab: 'OAB/SP 34c.678' }
 };
 
 // Inicialização
