@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Área do Cliente - Acompanhe suas consultas e documentos">
+    <title>Área do Cliente - Consultório Jurídico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Consultório Jurídico</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendamento.html" class="btn-primary">Agendar Consulta</a></li>
+                    <li><a href="area-cliente.html" class="btn-secondary active">Área do Cliente</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Área do Cliente</h1>
+            <p>Acompanhe suas consultas, documentos e informações</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <!-- Login/Registro (simulado) -->
+            <div class="card" id="loginSection" style="max-width: 500px; margin: 0 auto 3rem;">
+                <h2 class="card-title">Acesso à Área do Cliente</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>E-mail ou CPF</label>
+                        <input type="text" name="login" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Lembrar-me</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar</button>
+                    <p style="text-align: center; margin-top: 1rem; color: var(--text-light);">
+                        Não tem conta? <a href="agendamento.html" style="color: var(--primary-color);">Agende uma consulta</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Área Logada (oculta inicialmente) -->
+            <div id="loggedArea" style="display: none;">
+                <!-- Histórico de Consultas -->
+                <div class="card" style="margin-bottom: 3rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <h2 class="card-title">Histórico de Consultas</h2>
+                        <a href="agendamento.html" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Nova Consulta
+                        </a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Protocolo</th>
+                                    <th>Data/Hora</th>
+                                    <th>Área</th>
+                                    <th>Advogado</th>
+                                    <th>Tipo</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="consultationsTable">
+                                <tr>
+                                    <td>PROT-1234567890-0001</td>
+                                    <td>15/01/2024 - 14:00</td>
+                                    <td>Direito de Família</td>
+                                    <td>Dr. João Silva</td>
+                                    <td>Presencial</td>
+                                    <td><span style="background: var(--success); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">Confirmada</span></td>
+                                    <td>
+                                        <button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.85rem;" onclick="cancelConsultation('PROT-1234567890-0001')">
+                                            <i class="fas fa-times"></i> Cancelar
+                                        </button>
+                                        <button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.85rem; margin-left: 0.5rem;" onclick="rescheduleConsultation('PROT-1234567890-0001')">
+                                            <i class="fas fa-calendar-alt"></i> Remarcar
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PROT-1234567890-0002</td>
+                                    <td>20/01/2024 - 10:00</td>
+                                    <td>Direito Trabalhista</td>
+                                    <td>Dra. Maria Santos</td>
+                                    <td>Online</td>
+                                    <td><span style="background: var(--warning); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">Agendada</span></td>
+                                    <td>
+                                        <button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.85rem;" onclick="cancelConsultation('PROT-1234567890-0002')">
+                                            <i class="fas fa-times"></i> Cancelar
+                                        </button>
+                                        <button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.85rem; margin-left: 0.5rem;" onclick="rescheduleConsultation('PROT-1234567890-0002')">
+                                            <i class="fas fa-calendar-alt"></i> Remarcar
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Documentos -->
+                <div class="card" style="margin-bottom: 3rem;">
+                    <h2 class="card-title">Documentos e Contratos</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; text-align: center;">
+                            <i class="fas fa-file-contract" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h3 style="margin-bottom: 0.5rem;">Contrato de Prestação de Serviços</h3>
+                            <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.9rem;">Protocolo: PROT-1234567890-0001</p>
+                            <a href="#" class="btn btn-outline" onclick="downloadDocument('contrato-001.pdf')">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                        <div style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; text-align: center;">
+                            <i class="fas fa-file-alt" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <h3 style="margin-bottom: 0.5rem;">Proposta de Honorários</h3>
+                            <p style="color: var(--text-light); margin-bottom: 1rem; font-size: 0.9rem;">Protocolo: PROT-1234567890-0001</p>
+                            <a href="#" class="btn btn-outline" onclick="downloadDocument('proposta-001.pdf')">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat/Dúvidas -->
+                <div class="card">
+                    <h2 class="card-title">Dúvidas Pós-Consulta</h2>
+                    <p style="color: var(--text-light); margin-bottom: 2rem;">
+                        Envie suas dúvidas ou solicitações relacionadas às suas consultas.
+                    </p>
+                    <form id="doubtForm">
+                        <div class="form-group">
+                            <label>Assunto</label>
+                            <select name="subject" required>
+                                <option value="">Selecione...</option>
+                                <option value="duvida">Dúvida sobre consulta</option>
+                                <option value="documento">Solicitar documento</option>
+                                <option value="reagendamento">Reagendamento</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Protocolo da Consulta (se aplicável)</label>
+                            <input type="text" name="protocol" placeholder="PROT-1234567890-0001">
+                        </div>
+                        <div class="form-group">
+                            <label>Mensagem *</label>
+                            <textarea name="message" required placeholder="Descreva sua dúvida ou solicitação..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Consultório Jurídico</h3>
+                    <p>Atendimento especializado com segurança e privacidade.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Serviço</a></li>
+                        <li><a href="area-cliente.html">Área do Cliente</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-envelope"></i> contato@consultoriojuridico.com.br</li>
+                        <li><i class="fab fa-whatsapp"></i> (11) 98765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Consultório Jurídico. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simulação de login
+        document.getElementById('loginForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('loggedArea').style.display = 'block';
+        });
+
+        function cancelConsultation(protocol) {
+            if (confirm('Tem certeza que deseja cancelar esta consulta?')) {
+                const reason = prompt('Por favor, informe o motivo do cancelamento:');
+                if (reason) {
+                    alert('Cancelamento solicitado. Entraremos em contato em breve.');
+                }
+            }
+        }
+
+        function rescheduleConsultation(protocol) {
+            if (confirm('Deseja remarcar esta consulta?')) {
+                window.location.href = 'agendamento.html?remarcar=' + protocol;
+            }
+        }
+
+        function downloadDocument(filename) {
+            alert('Download do documento ' + filename + ' iniciado. (Simulação)');
+        }
+
+        document.getElementById('doubtForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
+        });
+    </script>
+    <style>
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .table {
+                font-size: 0.85rem;
+            }
+
+            .table th,
+            .table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</body>
+</html>
+

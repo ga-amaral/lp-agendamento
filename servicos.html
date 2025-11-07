@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Áreas de atuação jurídica - Direito de Família, Trabalhista, Civil, Tributário, Empresarial e mais.">
+    <title>Serviços - Áreas de Atuação</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Consultório Jurídico</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html" class="active">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendamento.html" class="btn-primary">Agendar Consulta</a></li>
+                    <li><a href="area-cliente.html" class="btn-secondary">Área do Cliente</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Áreas de Atuação</h1>
+            <p>Especialistas em diversas áreas do direito para atender suas necessidades</p>
+        </div>
+    </section>
+
+    <section class="services" style="padding: 80px 0;">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Direito de Família -->
+                <div class="service-card card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h2 class="card-title">Direito de Família</h2>
+                    <p class="service-description">
+                        Atendimento especializado em divórcios, guarda de filhos, pensão alimentícia, 
+                        união estável, inventários, adoção e demais questões familiares.
+                    </p>
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span><strong>Consulta Inicial:</strong> R$ 300,00</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Duração:</strong> 60-90 minutos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>Experiência:</strong> 15+ anos</span>
+                        </div>
+                    </div>
+                    <a href="agendamento.html?area=familia" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Agendar Consulta
+                    </a>
+                </div>
+
+                <!-- Direito Trabalhista -->
+                <div class="service-card card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h2 class="card-title">Direito Trabalhista</h2>
+                    <p class="service-description">
+                        Defesa dos direitos trabalhistas, rescisões, horas extras, férias, 
+                        FGTS, acidentes de trabalho e negociações coletivas.
+                    </p>
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span><strong>Consulta Inicial:</strong> R$ 250,00</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Duração:</strong> 60-90 minutos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>Experiência:</strong> 12+ anos</span>
+                        </div>
+                    </div>
+                    <a href="agendamento.html?area=trabalhista" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Agendar Consulta
+                    </a>
+                </div>
+
+                <!-- Direito Civil -->
+                <div class="service-card card">
+                    <div class="service-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h2 class="card-title">Direito Civil</h2>
+                    <p class="service-description">
+                        Contratos, responsabilidade civil, danos morais e materiais, 
+                        direito do consumidor, locação, compra e venda de imóveis.
+                    </p>
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span><strong>Consulta Inicial:</strong> R$ 280,00</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Duração:</strong> 60-90 minutos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>Experiência:</strong> 18+ anos</span>
+                        </div>
+                    </div>
+                    <a href="agendamento.html?area=civil" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Agendar Consulta
+                    </a>
+                </div>
+
+                <!-- Direito Tributário -->
+                <div class="service-card card">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h2 class="card-title">Direito Tributário</h2>
+                    <p class="service-description">
+                        Planejamento tributário, recuperação de créditos, defesas em 
+                        execuções fiscais, consultoria tributária e processos administrativos.
+                    </p>
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span><strong>Consulta Inicial:</strong> R$ 400,00</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Duração:</strong> 90 minutos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>Experiência:</strong> 20+ anos</span>
+                        </div>
+                    </div>
+                    <a href="agendamento.html?area=tributario" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Agendar Consulta
+                    </a>
+                </div>
+
+                <!-- Direito Empresarial -->
+                <div class="service-card card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2 class="card-title">Direito Empresarial</h2>
+                    <p class="service-description">
+                        Constituição de empresas, contratos comerciais, fusões e aquisições, 
+                        recuperação judicial, falência e consultoria empresarial.
+                    </p>
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span><strong>Consulta Inicial:</strong> R$ 450,00</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Duração:</strong> 90 minutos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>Experiência:</strong> 16+ anos</span>
+                        </div>
+                    </div>
+                    <a href="agendamento.html?area=empresarial" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Agendar Consulta
+                    </a>
+                </div>
+
+                <!-- Direito Criminal -->
+                <div class="service-card card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h2 class="card-title">Direito Criminal</h2>
+                    <p class="service-description">
+                        Defesa criminal, habeas corpus, inquéritos policiais, 
+                        processos criminais e consultoria em direito penal.
+                    </p>
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span><strong>Consulta Inicial:</strong> R$ 350,00</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Duração:</strong> 60-90 minutos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>Experiência:</strong> 14+ anos</span>
+                        </div>
+                    </div>
+                    <a href="agendamento.html?area=criminal" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Agendar Consulta
+                    </a>
+                </div>
+
+                <!-- Direito Previdenciário -->
+                <div class="service-card card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h2 class="card-title">Direito Previdenciário</h2>
+                    <p class="service-description">
+                        Aposentadoria, auxílio-doença, pensão por morte, 
+                        revisão de benefícios e consultoria previdenciária.
+                    </p>
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span><strong>Consulta Inicial:</strong> R$ 300,00</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Duração:</strong> 60-90 minutos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>Experiência:</strong> 13+ anos</span>
+                        </div>
+                    </div>
+                    <a href="agendamento.html?area=previdenciario" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Agendar Consulta
+                    </a>
+                </div>
+
+                <!-- Direito Imobiliário -->
+                <div class="service-card card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h2 class="card-title">Direito Imobiliário</h2>
+                    <p class="service-description">
+                        Compra e venda de imóveis, regularização de documentos, 
+                        usucapião, condomínios e questões locatícias.
+                    </p>
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span><strong>Consulta Inicial:</strong> R$ 320,00</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>Duração:</strong> 60-90 minutos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span><strong>Experiência:</strong> 11+ anos</span>
+                        </div>
+                    </div>
+                    <a href="agendamento.html?area=imobiliario" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Agendar Consulta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Consultório Jurídico</h3>
+                    <p>Atendimento especializado com segurança e privacidade.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Serviço</a></li>
+                        <li><a href="area-cliente.html">Área do Cliente</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-envelope"></i> contato@consultoriojuridico.com.br</li>
+                        <li><i class="fab fa-whatsapp"></i> (11) 98765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Consultório Jurídico. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <style>
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            text-align: center;
+        }
+
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2.5rem;
+        }
+
+        .service-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-details {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .service-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .service-detail-item i {
+            color: var(--primary-color);
+            width: 20px;
+        }
+    </style>
+</body>
+</html>
+

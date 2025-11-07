@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça nossa equipe de advogados especializados e experientes.">
+    <title>Sobre - Consultório Jurídico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Consultório Jurídico</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html" class="active">Sobre</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendamento.html" class="btn-primary">Agendar Consulta</a></li>
+                    <li><a href="area-cliente.html" class="btn-secondary">Área do Cliente</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Sobre Nossa Equipe</h1>
+            <p>Profissionais experientes e comprometidos com a excelência jurídica</p>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <!-- Advogado Principal -->
+            <div class="card" style="max-width: 900px; margin: 0 auto 4rem;">
+                <div style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                        <div style="width: 100%; aspect-ratio: 1; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 5rem;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="card-title">Dr. João Silva</h2>
+                        <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem;">
+                            <i class="fas fa-certificate"></i> OAB/SP 123.456
+                            <a href="https://www.oabsp.org.br" target="_blank" style="margin-left: 1rem; color: var(--primary-color); text-decoration: underline; font-size: 0.9rem;">
+                                Verificar OAB
+                            </a>
+                        </p>
+                        <h3 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Formação</h3>
+                        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-light); line-height: 2;">
+                            <li>Bacharel em Direito - Universidade de São Paulo (USP)</li>
+                            <li>Pós-graduação em Direito de Família - PUC/SP</li>
+                            <li>Mestrado em Direito Civil - USP</li>
+                            <li>Especialização em Mediação e Arbitragem</li>
+                        </ul>
+                        <h3 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Especialidades</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            <span style="background: var(--bg-light); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Direito de Família</span>
+                            <span style="background: var(--bg-light); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Direito Civil</span>
+                            <span style="background: var(--bg-light); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">Mediação</span>
+                        </div>
+                        <h3 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Experiência</h3>
+                        <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem;">
+                            Com mais de 15 anos de experiência, o Dr. João Silva atua principalmente nas áreas de 
+                            Direito de Família e Direito Civil. Já representou centenas de clientes em processos 
+                            complexos, sempre com foco na resolução eficiente e ética dos casos.
+                        </p>
+                        <h3 style="margin: 1.5rem 0 1rem; color: var(--text-dark);">Reconhecimentos</h3>
+                        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-light); line-height: 2;">
+                            <li>Prêmio Excelência Jurídica - OAB/SP (2020)</li>
+                            <li>Advogado Destaque em Direito de Família - Revista Jurídica (2019)</li>
+                            <li>Membro do Instituto Brasileiro de Direito de Família (IBDFAM)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outros Advogados -->
+            <h2 class="section-title">Nossa Equipe</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <!-- Dra. Maria Santos -->
+                <div class="card">
+                    <div style="width: 150px; height: 150px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 3rem;">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 style="text-align: center; margin-bottom: 0.5rem;">Dra. Maria Santos</h3>
+                    <p style="text-align: center; color: var(--primary-color); font-weight: 600; margin-bottom: 1rem;">
+                        <i class="fas fa-certificate"></i> OAB/SP 234.567
+                    </p>
+                    <p style="text-align: center; color: var(--text-light); margin-bottom: 1rem;">
+                        <strong>Especialidades:</strong> Direito Trabalhista, Direito Previdenciário
+                    </p>
+                    <p style="text-align: center; color: var(--text-light); margin-bottom: 1rem;">
+                        <strong>Experiência:</strong> 12+ anos
+                    </p>
+                    <p style="color: var(--text-light); line-height: 1.8; text-align: center;">
+                        Especialista em Direito Trabalhista com vasta experiência em ações trabalhistas 
+                        e consultoria previdenciária.
+                    </p>
+                </div>
+
+                <!-- Dr. Pedro Costa -->
+                <div class="card">
+                    <div style="width: 150px; height: 150px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 3rem;">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 style="text-align: center; margin-bottom: 0.5rem;">Dr. Pedro Costa</h3>
+                    <p style="text-align: center; color: var(--primary-color); font-weight: 600; margin-bottom: 1rem;">
+                        <i class="fas fa-certificate"></i> OAB/SP 345.678
+                    </p>
+                    <p style="text-align: center; color: var(--text-light); margin-bottom: 1rem;">
+                        <strong>Especialidades:</strong> Direito Tributário, Direito Empresarial
+                    </p>
+                    <p style="text-align: center; color: var(--text-light); margin-bottom: 1rem;">
+                        <strong>Experiência:</strong> 18+ anos
+                    </p>
+                    <p style="color: var(--text-light); line-height: 1.8; text-align: center;">
+                        Especialista em Direito Tributário e Empresarial, com foco em planejamento 
+                        tributário e consultoria empresarial.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Histórico de Atuação -->
+            <div class="card" style="margin-top: 4rem;">
+                <h2 class="card-title">Histórico de Atuação</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); font-weight: bold; margin-bottom: 0.5rem;">500+</div>
+                        <p style="color: var(--text-light);">Casos Resolvidos</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); font-weight: bold; margin-bottom: 0.5rem;">15+</div>
+                        <p style="color: var(--text-light);">Anos de Experiência</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); font-weight: bold; margin-bottom: 0.5rem;">98%</div>
+                        <p style="color: var(--text-light);">Taxa de Satisfação</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; color: var(--primary-color); font-weight: bold; margin-bottom: 0.5rem;">8</div>
+                        <p style="color: var(--text-light);">Áreas de Atuação</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Consultório Jurídico</h3>
+                    <p>Atendimento especializado com segurança e privacidade.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Serviço</a></li>
+                        <li><a href="area-cliente.html">Área do Cliente</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-envelope"></i> contato@consultoriojuridico.com.br</li>
+                        <li><i class="fab fa-whatsapp"></i> (11) 98765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Consultório Jurídico. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

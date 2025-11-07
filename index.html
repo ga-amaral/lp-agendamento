@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agende sua consulta jurídica com segurança e privacidade. Advogados especializados em diversas áreas do direito.">
+    <title>Consultório Jurídico - Agende sua Consulta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Consultório Jurídico</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendamento.html" class="btn-primary">Agendar Consulta</a></li>
+                    <li><a href="area-cliente.html" class="btn-secondary">Área do Cliente</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Agende sua consulta jurídica com <span class="highlight">segurança e privacidade</span></h1>
+                <p class="hero-subtitle">Atendimento especializado, confidencial e rápido. Seus direitos protegidos por profissionais experientes.</p>
+                <a href="agendamento.html" class="btn-cta">
+                    <i class="fas fa-calendar-check"></i>
+                    Marcar Consulta Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Por que escolher nosso consultório?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Confidencialidade Total</h3>
+                    <p>Seus dados e informações são protegidos com criptografia de ponta e conformidade total com a LGPD.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Atendimento Rápido</h3>
+                    <p>Agende sua consulta em minutos e seja atendido em até 48 horas. Respostas ágeis para suas necessidades.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Profissional Especializado</h3>
+                    <p>Advogados certificados pela OAB com anos de experiência em diversas áreas do direito.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Segurança de Dados</h3>
+                    <p>Sistema seguro com certificado SSL e proteção contra vazamento de informações pessoais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O que nossos clientes dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Atendimento excepcional! O advogado foi muito atencioso e resolveu meu caso trabalhista com sucesso. Recomendo!"</p>
+                    <div class="testimonial-author">
+                        <strong>Maria Silva</strong>
+                        <span>Direito Trabalhista</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Processo muito simples e seguro. A consulta online foi perfeita e me poupou tempo. Profissionalismo em todos os aspectos."</p>
+                    <div class="testimonial-author">
+                        <strong>João Santos</strong>
+                        <span>Direito Civil</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excelente experiência! A equipe foi muito prestativa e consegui agendar rapidamente. Meu caso de família foi resolvido com sucesso."</p>
+                    <div class="testimonial-author">
+                        <strong>Ana Costa</strong>
+                        <span>Direito de Família</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona o agendamento?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O processo é simples: escolha a área de direito, selecione o tipo de consulta (presencial, online ou telefone), escolha data e horário disponíveis, preencha seus dados e confirme. Você receberá um protocolo de confirmação por e-mail.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto custa a consulta inicial?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Os valores variam conforme a área de atuação. Consulte nossa página de serviços para ver os valores específicos de cada área. Oferecemos condições especiais para primeira consulta.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso cancelar ou remarcar minha consulta?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, você pode cancelar ou remarcar sua consulta com até 24 horas de antecedência através da Área do Cliente ou entrando em contato conosco. Cancelamentos com menos de 24h podem estar sujeitos a taxas.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Meus dados estão seguros?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutamente! Utilizamos criptografia SSL, seguimos rigorosamente a LGPD e mantemos todos os dados em servidores seguros. Sua privacidade é nossa prioridade.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona a consulta online?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A consulta online é realizada via Zoom ou Google Meet. Você receberá o link de acesso por e-mail antes da consulta. É necessário ter uma conexão estável com internet e câmera/microfone funcionando.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo dura uma consulta?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>As consultas iniciais geralmente duram entre 60 a 90 minutos, tempo suficiente para entender seu caso e fornecer orientações iniciais. Consultas de retorno podem ser mais curtas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Pronto para resolver sua questão jurídica?</h2>
+            <p>Agende sua consulta agora e tenha acesso a profissionais especializados</p>
+            <a href="agendamento.html" class="btn-cta">
+                <i class="fas fa-calendar-check"></i>
+                Agendar Consulta
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Consultório Jurídico</h3>
+                    <p>Atendimento especializado com segurança e privacidade.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Serviço</a></li>
+                        <li><a href="area-cliente.html">Área do Cliente</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-envelope"></i> contato@consultoriojuridico.com.br</li>
+                        <li><i class="fab fa-whatsapp"></i> (11) 98765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Consultório Jurídico. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

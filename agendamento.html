@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agende sua consulta jurídica online de forma rápida e segura.">
+    <title>Agendamento - Consulta Jurídica</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/agendamento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Consultório Jurídico</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="agendamento.html" class="btn-primary active">Agendar Consulta</a></li>
+                    <li><a href="area-cliente.html" class="btn-secondary">Área do Cliente</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Agendamento de Consulta</h1>
+            <p>Preencha as informações abaixo para agendar sua consulta jurídica</p>
+        </div>
+    </section>
+
+    <section class="booking-section" style="padding: 60px 0;">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Área</div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Advogado</div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Tipo</div>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Data/Hora</div>
+                </div>
+                <div class="progress-step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-label">Dados</div>
+                </div>
+                <div class="progress-step" data-step="6">
+                    <div class="step-number">6</div>
+                    <div class="step-label">LGPD</div>
+                </div>
+                <div class="progress-step" data-step="7">
+                    <div class="step-number">7</div>
+                    <div class="step-label">Pagamento</div>
+                </div>
+                <div class="progress-step" data-step="8">
+                    <div class="step-number">8</div>
+                    <div class="step-label">Confirmação</div>
+                </div>
+            </div>
+
+            <form id="bookingForm" class="booking-form">
+                <!-- Etapa 1: Seleção da Área -->
+                <div class="form-step active" data-step="1">
+                    <div class="card">
+                        <h2 class="card-title">Etapa 1: Selecione a Área de Direito</h2>
+                        <div class="area-grid">
+                            <label class="area-option">
+                                <input type="radio" name="area" value="familia" required>
+                                <div class="area-card">
+                                    <i class="fas fa-heart"></i>
+                                    <h3>Direito de Família</h3>
+                                    <p>R$ 300,00</p>
+                                </div>
+                            </label>
+                            <label class="area-option">
+                                <input type="radio" name="area" value="trabalhista" required>
+                                <div class="area-card">
+                                    <i class="fas fa-briefcase"></i>
+                                    <h3>Direito Trabalhista</h3>
+                                    <p>R$ 250,00</p>
+                                </div>
+                            </label>
+                            <label class="area-option">
+                                <input type="radio" name="area" value="civil" required>
+                                <div class="area-card">
+                                    <i class="fas fa-gavel"></i>
+                                    <h3>Direito Civil</h3>
+                                    <p>R$ 280,00</p>
+                                </div>
+                            </label>
+                            <label class="area-option">
+                                <input type="radio" name="area" value="tributario" required>
+                                <div class="area-card">
+                                    <i class="fas fa-calculator"></i>
+                                    <h3>Direito Tributário</h3>
+                                    <p>R$ 400,00</p>
+                                </div>
+                            </label>
+                            <label class="area-option">
+                                <input type="radio" name="area" value="empresarial" required>
+                                <div class="area-card">
+                                    <i class="fas fa-building"></i>
+                                    <h3>Direito Empresarial</h3>
+                                    <p>R$ 450,00</p>
+                                </div>
+                            </label>
+                            <label class="area-option">
+                                <input type="radio" name="area" value="criminal" required>
+                                <div class="area-card">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h3>Direito Criminal</h3>
+                                    <p>R$ 350,00</p>
+                                </div>
+                            </label>
+                            <label class="area-option">
+                                <input type="radio" name="area" value="previdenciario" required>
+                                <div class="area-card">
+                                    <i class="fas fa-id-card"></i>
+                                    <h3>Direito Previdenciário</h3>
+                                    <p>R$ 300,00</p>
+                                </div>
+                            </label>
+                            <label class="area-option">
+                                <input type="radio" name="area" value="imobiliario" required>
+                                <div class="area-card">
+                                    <i class="fas fa-home"></i>
+                                    <h3>Direito Imobiliário</h3>
+                                    <p>R$ 320,00</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Próximo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 2: Seleção do Advogado -->
+                <div class="form-step" data-step="2">
+                    <div class="card">
+                        <h2 class="card-title">Etapa 2: Selecione o Advogado</h2>
+                        <div class="lawyer-grid">
+                            <label class="lawyer-option">
+                                <input type="radio" name="lawyer" value="dr-silva" required>
+                                <div class="lawyer-card">
+                                    <div class="lawyer-photo">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <h3>Dr. João Silva</h3>
+                                    <p>OAB/SP 123.456</p>
+                                    <p class="lawyer-exp">15+ anos de experiência</p>
+                                </div>
+                            </label>
+                            <label class="lawyer-option">
+                                <input type="radio" name="lawyer" value="dra-santos" required>
+                                <div class="lawyer-card">
+                                    <div class="lawyer-photo">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <h3>Dra. Maria Santos</h3>
+                                    <p>OAB/SP 234.567</p>
+                                    <p class="lawyer-exp">12+ anos de experiência</p>
+                                </div>
+                            </label>
+                            <label class="lawyer-option">
+                                <input type="radio" name="lawyer" value="dr-costa" required>
+                                <div class="lawyer-card">
+                                    <div class="lawyer-photo">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <h3>Dr. Pedro Costa</h3>
+                                    <p>OAB/SP 345.678</p>
+                                    <p class="lawyer-exp">18+ anos de experiência</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="prevStep()">Anterior</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Próximo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 3: Tipo de Consulta -->
+                <div class="form-step" data-step="3">
+                    <div class="card">
+                        <h2 class="card-title">Etapa 3: Tipo de Consulta</h2>
+                        <div class="consultation-type-grid">
+                            <label class="type-option">
+                                <input type="radio" name="consultationType" value="presencial" required>
+                                <div class="type-card">
+                                    <i class="fas fa-building"></i>
+                                    <h3>Presencial</h3>
+                                    <p>No escritório</p>
+                                </div>
+                            </label>
+                            <label class="type-option">
+                                <input type="radio" name="consultationType" value="online" required>
+                                <div class="type-card">
+                                    <i class="fas fa-video"></i>
+                                    <h3>Online</h3>
+                                    <p>Via Zoom/Meet</p>
+                                </div>
+                            </label>
+                            <label class="type-option">
+                                <input type="radio" name="consultationType" value="telefone" required>
+                                <div class="type-card">
+                                    <i class="fas fa-phone"></i>
+                                    <h3>Telefone</h3>
+                                    <p>Ligação telefônica</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="prevStep()">Anterior</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Próximo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 4: Calendário e Horário -->
+                <div class="form-step" data-step="4">
+                    <div class="card">
+                        <h2 class="card-title">Etapa 4: Selecione Data e Horário</h2>
+                        <div class="calendar-section">
+                            <div class="form-group">
+                                <label>Data da Consulta</label>
+                                <input type="date" name="consultationDate" id="consultationDate" required min="">
+                            </div>
+                            <div class="form-group">
+                                <label>Horário Disponível</label>
+                                <div class="time-slots" id="timeSlots">
+                                    <!-- Horários serão carregados dinamicamente -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="prevStep()">Anterior</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Próximo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 5: Dados do Cliente -->
+                <div class="form-step" data-step="5">
+                    <div class="card">
+                        <h2 class="card-title">Etapa 5: Dados do Cliente</h2>
+                        <div class="form-group">
+                            <label>Nome Completo *</label>
+                            <input type="text" name="clientName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>CPF *</label>
+                            <input type="text" name="cpf" id="cpf" required maxlength="14" placeholder="000.000.000-00">
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone *</label>
+                            <input type="tel" name="phone" id="phone" required maxlength="15" placeholder="(00) 00000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label>Descritivo do Caso *</label>
+                            <textarea name="caseDescription" required placeholder="Descreva brevemente sua situação jurídica..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="prevStep()">Anterior</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Próximo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 6: Confirmação LGPD -->
+                <div class="form-step" data-step="6">
+                    <div class="card">
+                        <h2 class="card-title">Etapa 6: Privacidade e Proteção de Dados</h2>
+                        <div class="lgpd-section">
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Seus dados são protegidos conforme a Lei Geral de Proteção de Dados (LGPD).</p>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" name="lgpdConsent" id="lgpdConsent" required>
+                                    <label for="lgpdConsent">
+                                        Concordo com o tratamento dos meus dados pessoais conforme a 
+                                        <a href="privacidade.html" target="_blank">Política de Privacidade</a> e 
+                                        autorizo o uso para fins de agendamento e comunicação sobre a consulta.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" name="marketingConsent" id="marketingConsent">
+                                    <label for="marketingConsent">
+                                        Autorizo o envio de comunicações sobre serviços jurídicos e novidades (opcional).
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="prevStep()">Anterior</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Próximo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 7: Pagamento -->
+                <div class="form-step" data-step="7">
+                    <div class="card">
+                        <h2 class="card-title">Etapa 7: Forma de Pagamento</h2>
+                        <div class="payment-section">
+                            <p class="payment-note">
+                                <i class="fas fa-info-circle"></i>
+                                O pagamento pode ser realizado no dia da consulta ou antecipadamente.
+                            </p>
+                            <div class="payment-options">
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="presencial" checked>
+                                    <div class="payment-card">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <h3>Presencial</h3>
+                                        <p>Pague no dia da consulta</p>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="pix">
+                                    <div class="payment-card">
+                                        <i class="fas fa-qrcode"></i>
+                                        <h3>PIX</h3>
+                                        <p>Pagamento instantâneo</p>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="cartao">
+                                    <div class="payment-card">
+                                        <i class="fas fa-credit-card"></i>
+                                        <h3>Cartão</h3>
+                                        <p>Crédito ou Débito</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="prevStep()">Anterior</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Próximo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 8: Confirmação -->
+                <div class="form-step" data-step="8">
+                    <div class="card">
+                        <div class="confirmation-section">
+                            <div class="confirmation-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h2 class="card-title">Agendamento Confirmado!</h2>
+                            <div class="confirmation-details" id="confirmationDetails">
+                                <!-- Detalhes serão preenchidos via JavaScript -->
+                            </div>
+                            <div class="protocol-number">
+                                <p><strong>Número de Protocolo:</strong></p>
+                                <p class="protocol" id="protocolNumber"></p>
+                            </div>
+                            <div class="alert alert-success">
+                                <i class="fas fa-envelope"></i>
+                                <p>Um e-mail de confirmação foi enviado para o endereço informado.</p>
+                            </div>
+                            <div class="form-actions">
+                                <a href="area-cliente.html" class="btn btn-primary">Acessar Área do Cliente</a>
+                                <a href="index.html" class="btn btn-outline">Voltar ao Início</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Consultório Jurídico</h3>
+                    <p>Atendimento especializado com segurança e privacidade.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Serviço</a></li>
+                        <li><a href="area-cliente.html">Área do Cliente</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-envelope"></i> contato@consultoriojuridico.com.br</li>
+                        <li><i class="fab fa-whatsapp"></i> (11) 98765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Consultório Jurídico. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/agendamento.js"></script>
+</body>
+</html>
+
