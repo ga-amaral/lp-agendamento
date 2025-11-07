@@ -160,14 +160,48 @@
 
 [data-theme="dark"] .page-header {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .page-header h1 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .page-header p {
+    color: #ffffff;
+    opacity: 0.95;
 }
 
 [data-theme="dark"] .hero {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .hero-title {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .hero-title .highlight {
+    color: var(--accent-color);
+}
+
+[data-theme="dark"] .hero-subtitle {
+    color: #ffffff;
+    opacity: 0.95;
 }
 
 [data-theme="dark"] .cta-final {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .cta-final h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .cta-final p {
+    color: #ffffff;
+    opacity: 0.95;
 }
 
 [data-theme="dark"] .progress-bar::before {
@@ -378,6 +412,7 @@ body {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: #ffffff;
 }
 
 .hero-title .highlight {
@@ -387,7 +422,8 @@ body {
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    color: #ffffff;
 }
 
 .btn-cta {
@@ -574,19 +610,21 @@ body {
 .cta-final {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: var(--white);
+    color: #ffffff;
     text-align: center;
 }
 
 .cta-final h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 .cta-final p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    color: #ffffff;
 }
 
 /* Footer */
@@ -760,7 +798,7 @@ body {
 /* Page Header */
 .page-header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: var(--white);
+    color: #ffffff;
     padding: 60px 0;
     text-align: center;
 }
@@ -768,11 +806,13 @@ body {
 .page-header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 .page-header p {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    color: #ffffff;
 }
 
 /* Card Styles */
